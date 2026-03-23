@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações básicas do site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Nykolas Perazzo | Portfólio</title>
+
+    <!-- Link do CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER (MENU) ================= -->
+<header>
+
+    <!-- Logo / Nome -->
+     <h1><a href="#inicio" class="logo">NP.</a></h1>
+
+    <!-- Menu de navegação com âncoras -->
+    <nav id="inicio">
+        <ul>
+            <!-- Cada link leva para uma seção da página -->
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- ================= SEÇÃO SOBRE ================= -->
+<section id="sobre">
+
+    <!-- Título da seção -->
+    <h2>Sobre mim</h2>
+
+    <!-- Texto de apresentação -->
+    <p>
+        Me chamo Nykolas Perazzo. Tenho 24 anos e sou do Rio Grande do Sul.
+        Atualmente curso Análise e Desenvolvimento de Sistemas na Uninter.
+        Sou apaixonado por tecnologia e desenvolvimento web, buscando evolução constante.
+    </p>
+
+</section>
+
+<!-- ================= SEÇÃO FORMAÇÃO ================= -->
+<section id="formacao">
+
+    <h2>Formação</h2>
+
+    <p>
+        Curso: Análise e Desenvolvimento de Sistemas - Uninter <br>
+        Conhecimentos: HTML, CSS, JavaScript <br>
+        Objetivo: Me tornar desenvolvedor front-end profissional
+    </p>
+
+</section>
+
+<!-- ================= SEÇÃO PORTFÓLIO ================= -->
+<section id="portfolio">
+
+    <h2>Portfólio</h2>
+    <p>Projetos desenvolvidos:</p>
+
+    <!-- Container dos projetos -->
+    <div class="projetos">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="./img/autentica.png" alt="Site de barbearia">
+            <h3>Site de Barbearia</h3>
+            <p>Landing page moderna para barbearia com design responsivo.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="./img/pierclothing.png" alt="Loja de roupas">
+            <h3>Loja Pier Clothing</h3>
+            <p>E-commerce com foco em moda urbana e design moderno.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="./img/eEntregas.png" alt="">
+            <h3>Sistema Entregas</h3>
+            <p>Sistema completo de controle de estregas com dashboard.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SEÇÃO CONTATO ================= -->
+<section id="contato">
+
+    <h2>Contato</h2>
+
+    <!-- Formulário de contato -->
+    <form id="form">
+
+        <!-- Campo nome -->
+        <input type="text" id="nome" placeholder="Nome">
+
+        <!-- Campo email -->
+        <input type="email" id="email" placeholder="Email">
+
+        <!-- Campo da mensagem -->
+        <textarea id="mensagem" placeholder="Mensagem"></textarea>
+
+        <!-- Botão de envio -->
+        <button type="submit">Enviar</button>
+
+    </form>
+
+</section>
+
+<!-- ================= RODAPÉ ================= -->
+<footer>
+    <p>© 2026 - Nykolas Perazzo Todos os direitos reservados.</p>
+
+</footer>
+
+<!-- Script JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

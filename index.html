@@ -1,132 +1,412 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <!-- Configurações básicas do site -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Título que aparece na aba do navegador -->
-    <title>Nykolas Perazzo | Portfólio</title>
-
-    <!-- Link do CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- ================= HEADER (MENU) ================= -->
-<header>
-
-    <!-- Logo / Nome -->
-     <h1 class="logo">NP.</h1>
-
-    <!-- Menu de navegação com âncoras -->
-    <nav>
-        <ul>
-            <!-- Cada link leva para uma seção da página -->
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#formacao">Formação</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-<!-- ================= SEÇÃO SOBRE ================= -->
-<section id="sobre">
-
-    <!-- Título da seção -->
-    <h2>Sobre mim</h2>
-
-    <!-- Texto de apresentação -->
-    <p>
-        Me chamo Nykolas Perazzo. Tenho 24 anos e sou do Rio Grande do Sul.
-        Atualmente curso Análise e Desenvolvimento de Sistemas na Uninter.
-        Sou apaixonado por tecnologia e desenvolvimento web, buscando evolução constante.
-    </p>
-
-</section>
-
-<!-- ================= SEÇÃO FORMAÇÃO ================= -->
-<section id="formacao">
-
-    <h2>Formação</h2>
-
-    <p>
-        Curso: Análise e Desenvolvimento de Sistemas - Uninter <br>
-        Conhecimentos: HTML, CSS, JavaScript <br>
-        Objetivo: Me tornar desenvolvedor front-end profissional
-    </p>
-
-</section>
-
-<!-- ================= SEÇÃO PORTFÓLIO ================= -->
-<section id="portfolio">
-
-    <h2>Portfólio</h2>
-    <p>Projetos desenvolvidos:</p>
-
-    <!-- Container dos projetos -->
-    <div class="projetos">
-
-        <!-- Card 1 -->
-        <div class="card">
-            <img src="./img/autentica.png" alt="Site de barbearia">
-            <h3>Site de Barbearia</h3>
-            <p>Landing page moderna para barbearia com design responsivo.</p>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nykolas Perazzo - Portfólio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="mobile-container">
+      <header class="header">
+        <div class="header__logo">
+          <span class="header__logo-icon">NP</span>
+          <span class="header__logo-text">NYKOLAS<br />PERAZZO</span>
         </div>
+        <button class="header__menu-btn" aria-label="Abrir menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </header>
 
-        <!-- Card 2 -->
-        <div class="card">
-            <img src="./img/pierclothing.png" alt="Loja de roupas">
-            <h3>Loja Pier Clothing</h3>
-            <p>E-commerce com foco em moda urbana e design moderno.</p>
-        </div>
+      <main>
+        <section class="hero">
+          <div class="hero__glow-bg"></div>
 
-        <!-- Card 3 -->
-        <div class="card">
-            <img src="./img/eEntregas.png" alt="">
-            <h3>Sistema Entregas</h3>
-            <p>Sistema completo de controle de estregas com dashboard.</p>
-        </div>
+          <div class="hero__notifications">
+            <div class="notification">
+              <div class="notification__icon">
+                <img
+                  class="ph-fill ph-headphones"
+                  src="img/icon-bradesco.png"
+                  alt="Headphones"
+                />
+              </div>
+              <div class="notification__content">
+                <p class="notification__title">
+                  Transferência recebida <span>há 1h</span>
+                </p>
+                <p class="notification__text">
+                  Você recebeu uma transferência de<br />R$ 330
+                </p>
+              </div>
+            </div>
+            <div class="notification">
+              <div class="notification__icon">
+                <img
+                  class="ph-fill ph-headphones"
+                  src="img/icon-bradesco.png"
+                  alt="Headphones"
+                />
+              </div>
+              <div class="notification__content">
+                <p class="notification__title">
+                  Transferência recebida <span>há 2h</span>
+                </p>
+                <p class="notification__text">
+                  Você recebeu uma transferência de<br />R$ 500
+                </p>
+              </div>
+            </div>
+          </div>
 
+          <div class="hero__image-wrapper">
+            <img
+              src="img/foto-perfil-2.png"
+              alt="Nykolas Perazzo"
+              class="hero__image"
+            />
+
+            <div class="hero__circular-text">
+              <svg viewBox="0 0 100 100" width="120" height="120">
+                <path
+                  id="circlePath"
+                  d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
+                  fill="none"
+                />
+                <text fill="rgba(255,255,255,0.5)">
+                  <textPath href="#circlePath" startOffset="0%">
+                    DESIGNER • FRONT-END • UI/UX •
+                  </textPath>
+                </text>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-info">
+          <p class="profile-info__subtitle">DESIGNER & FRONT-END</p>
+          <h1 class="profile-info__title">NYKOLAS<br />PERAZZO</h1>
+          <p class="profile-info__description">
+            Crio experiências digitais únicas que conectam marcas às pessoas e
+            geram <span class="text-highlight">resultados reais</span>.
+          </p>
+        </section>
+
+        <section class="availability-card">
+          <div class="availability-card__content">
+            <div class="availability-card__status">
+              <span class="status-dot"></span> DISPONÍVEL PARA
+            </div>
+            <h2 class="availability-card__title">NOVOS PROJETOS</h2>
+            <p class="availability-card__text">
+              Vamos tirar sua ideia do papel e transformar em digital.
+            </p>
+          </div>
+          <button class="availability-card__btn" aria-label="Iniciar Projeto">
+            <i class="ph ph-arrow-right"></i>
+          </button>
+        </section>
+
+        <section class="action-buttons">
+          <a href="#" class="btn btn--primary">
+            VER PROJETOS <i class="ph ph-arrow-up-right"></i>
+          </a>
+          <a href="#" class="btn btn--secondary">
+            SOBRE MIM <i class="ph ph-user"></i>
+          </a>
+        </section>
+
+        <section class="stats">
+          <div class="stat-item">
+            <i class="ph ph-shield-check stat-item__icon"></i>
+            <h3 class="stat-item__value">+3 ANOS</h3>
+            <p class="stat-item__label">DE EXPERIÊNCIA</p>
+          </div>
+          <div class="stat-item">
+            <i class="ph ph-folder-notch stat-item__icon"></i>
+            <h3 class="stat-item__value">+20</h3>
+            <p class="stat-item__label">CLIENTES</p>
+          </div>
+          <div class="stat-item">
+            <i class="ph ph-rocket-launch stat-item__icon"></i>
+            <h3 class="stat-item__value">+12</h3>
+            <p class="stat-item__label">PROJETOS<br />CONCLUÍDOS</p>
+          </div>
+        </section>
+
+        <section class="brands">
+          <h4 class="brands__title">MARCAS QUE CONFIAM NO MEU TRABALHO</h4>
+          <div class="brands__logos">
+            <span class="brand-logo">Audi</span>
+            <span class="brand-logo">Toyota</span>
+            <span class="brand-logo">SAMSUNG</span>
+            <span class="brand-logo">Coca-Cola</span>
+            <span class="brand-logo">KFC</span>
+            <span class="brand-logo">IRELLI</span>
+          </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+          <div class="section-header">
+            <span class="section-tag">ESPECIALIDADES</span>
+            <h2 class="section-title">Minhas <span>Skills</span></h2>
+            <p class="section-description">
+              Unindo design estratégico, desenvolvimento moderno e foco em
+              resultados para criar experiências digitais memoráveis.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i class="ph ph-pencil-ruler"></i>
+              </div>
+
+              <h3 class="skill-title">UI/UX Design</h3>
+
+              <p class="skill-desc">
+                Criação de interfaces modernas, intuitivas e focadas na
+                experiência do usuário, transformando ideias em produtos
+                digitais elegantes.
+              </p>
+
+              <div class="skill-level">
+                <span>95%</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 95%"></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i class="ph ph-code"></i>
+              </div>
+
+              <h3 class="skill-title">Front-End Development</h3>
+
+              <p class="skill-desc">
+                Desenvolvimento utilizando HTML, CSS e JavaScript moderno,
+                criando interfaces rápidas, responsivas e escaláveis.
+              </p>
+
+              <div class="skill-level">
+                <span>90%</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i class="ph ph-lightning"></i>
+              </div>
+
+              <h3 class="skill-title">Performance & SEO</h3>
+
+              <p class="skill-desc">
+                Otimização para carregamento rápido, boas métricas de Core Web
+                Vitals e melhor posicionamento nos mecanismos de busca.
+              </p>
+
+              <div class="skill-level">
+                <span>88%</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 88%"></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i class="ph ph-palette"></i>
+              </div>
+
+              <h3 class="skill-title">Identidade Visual</h3>
+
+              <p class="skill-desc">
+                Construção de marcas fortes, com personalidade, estratégia
+                visual e comunicação alinhada aos objetivos do negócio.
+              </p>
+
+              <div class="skill-level">
+                <span>85%</span>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="sobre" class="about-section">
+          <div class="section-header">
+            <span class="section-tag">QUEM SOU EU</span>
+            <h2 class="section-title">Sobre <span>Mim</span></h2>
+          </div>
+
+          <div class="about-content">
+            <div class="about-stats">
+              <div class="about-stat">
+                <h3>3+</h3>
+                <span>Anos de experiência</span>
+              </div>
+
+              <div class="about-stat">
+                <h3>20+</h3>
+                <span>Clientes atendidos</span>
+              </div>
+
+              <div class="about-stat">
+                <h3>12+</h3>
+                <span>Projetos entregues</span>
+              </div>
+            </div>
+
+            <div class="about-texts">
+              <p>
+                Sou desenvolvedor Front-End e Designer UI/UX apaixonado por
+                criar experiências digitais modernas, funcionais e visualmente
+                marcantes.
+              </p>
+
+              <p>
+                Meu trabalho vai além da estética. Busco construir soluções que
+                gerem resultados reais para empresas, fortalecendo marcas e
+                aumentando conversões.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projetos" class="projects-section">
+          <div class="section-header">
+            <span class="section-tag">PORTFÓLIO</span>
+            <h2 class="section-title">Projetos <span>Em Destaque</span></h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-image">
+                <img src="img/pierclothing.png" alt="" width="100%" />
+              </div>
+
+              <div class="project-content">
+                <span class="project-category"> Design & Desenvolvimento </span>
+
+                <h3 class="project-title">E-Commerce Premium</h3>
+
+                <p class="project-desc">
+                  Plataforma focada em conversão, experiência do usuário e
+                  performance.
+                </p>
+
+                <a href="#" class="project-link"> Ver Projeto → </a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image">
+                <img
+                  src="img/autentica.png"
+                  alt="Barbearia Estilo"
+                  width="100%"
+                />
+              </div>
+
+              <div class="project-content">
+                <span class="project-category"> Website Institucional </span>
+
+                <h3 class="project-title">Barbearia Estilo</h3>
+
+                <p class="project-desc">
+                  Projeto desenvolvido para modernizar a presença digital da
+                  Barbearia Estilo, destacando serviços, agendamento rápido,
+                  galeria de cortes e contato direto com os clientes através de
+                  uma experiência moderna e responsiva.
+                </p>
+
+                <a
+                  href="https://nykolasperazzo.github.io/barbearia/"
+                  class="project-link"
+                  target="_blank"
+                >
+                  Ver Projeto →
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="contato" class="contact-section">
+          <div class="contact-glow"></div>
+
+          <div class="contact-content">
+            <span class="section-tag"> ENTRE EM CONTATO </span>
+
+            <h2 class="contact-title">Vamos criar algo incrível juntos?</h2>
+
+            <p class="contact-description">
+              Estou disponível para novos projetos, freelas e parcerias
+              estratégicas.
+            </p>
+
+            <div class="contact-actions">
+              <a href="#" class="contact-btn-primary"> Iniciar Projeto </a>
+
+              <a href="#" class="contact-btn-secondary"> Ver Portfólio </a>
+            </div>
+          </div>
+        </section>
+
+        <nav class="bottom-menu">
+          <a href="#" class="menu-item menu-item--active">
+            <div class="menu-item__icon"><i class="ph-fill ph-house"></i></div>
+            <div class="menu-item__text">
+              <span class="menu-item__title">01. HOME</span>
+              <span class="menu-item__subtitle">Início</span>
+            </div>
+            <i class="ph ph-caret-right menu-item__arrow"></i>
+          </a>
+
+          <a href="#" class="menu-item">
+            <div class="menu-item__icon"><i class="ph ph-user"></i></div>
+            <div class="menu-item__text">
+              <span class="menu-item__title">02. SOBRE</span>
+              <span class="menu-item__subtitle">Sobre mim</span>
+            </div>
+            <i class="ph ph-caret-right menu-item__arrow"></i>
+          </a>
+
+          <a href="#" class="menu-item">
+            <div class="menu-item__icon"><i class="ph ph-folder"></i></div>
+            <div class="menu-item__text">
+              <span class="menu-item__title">03. PROJETOS</span>
+              <span class="menu-item__subtitle">Meu portfólio</span>
+            </div>
+            <i class="ph ph-caret-right menu-item__arrow"></i>
+          </a>
+
+          <a href="#" class="menu-item">
+            <div class="menu-item__icon">
+              <i class="ph ph-envelope-simple"></i>
+            </div>
+            <div class="menu-item__text">
+              <span class="menu-item__title">04. CONTATO</span>
+              <span class="menu-item__subtitle">Fale comigo</span>
+            </div>
+            <i class="ph ph-caret-right menu-item__arrow"></i>
+          </a>
+        </nav>
+      </main>
     </div>
-
-</section>
-
-<!-- ================= SEÇÃO CONTATO ================= -->
-<section id="contato">
-
-    <h2>Contato</h2>
-
-    <!-- Formulário de contato -->
-    <form id="form">
-
-        <!-- Campo nome -->
-        <input type="text" id="nome" placeholder="Nome">
-
-        <!-- Campo email -->
-        <input type="email" id="email" placeholder="Email">
-
-        <!-- Campo da mensagem -->
-        <textarea id="mensagem" placeholder="Mensagem"></textarea>
-
-        <!-- Botão de envio -->
-        <button type="submit">Enviar</button>
-
-    </form>
-
-</section>
-
-<!-- ================= RODAPÉ ================= -->
-<footer>
-    <p>© 2026 - Nykolas Perazzo Todos os direitos reservados.</p>
-
-</footer>
-
-<!-- Script JavaScript -->
-<script src="script.js"></script>
-
-</body>
+  </body>
 </html>
